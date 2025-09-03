@@ -1,8 +1,8 @@
 /* =========================
    Config (set your email!)
 ========================= */
-const BOOKING_EMAIL = "your-email@example.com";     // <-- replace with your real email
-const CONTACT_EMAIL  = "your-email@example.com";     // <-- replace with your real email
+const BOOKING_EMAIL = "mushymillc@gmail.com";     
+const CONTACT_EMAIL  = "mushymillc@gmail.com";     
 
 /* =========== Menu =========== */
 const menuBtn = document.getElementById("menu-btn");
