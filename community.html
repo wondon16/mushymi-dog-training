@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community | Mushymi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="sparkle-canvas"></canvas>
+  <div id="music-control"><button id="toggle-music">🔊 Music On</button>
+    <audio id="bg-music" loop autoplay><source src="audio/lofi.mp3" type="audio/mp3" /></audio>
+  </div>
+
+  <header>
+    <h1 class="tw">Community Blog & Chat</h1>
+    <p class="tag tw">Share progress, celebrate wins, and help others.</p>
+    <button id="menu-btn">Menu ☰</button>
+    <nav id="menu" class="hidden">
+      <ul>
+        <li><a href="training.html">Training Videos</a></li>
+        <li><a href="howto.html">Step-by-Step Basics</a></li>
+        <li><a href="schedule.html">Schedule Session</a></li>
+        <li><a href="community.html" aria-current="page">Community</a></li>
+        <li><a href="profile.html">Dog Profile</a></li>
+        <li><a href="diet.html">Raw Food Diet Plans</a></li>
+        <li><a href="contact.html">Ask a Question</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="card">
+    <div class="grid-2">
+      <article>
+        <h2 class="tw">Share a Post</h2>
+        <form id="post-form" class="form">
+          <label>Photo/Video <input id="post-file" type="file" accept="image/*,video/*" /></label>
+          <label>Caption <textarea id="post-caption" placeholder="What did your dog learn today?"></textarea></label>
+          <button class="btn" type="submit">Post</button>
+        </form>
+        <div id="posts" class="post-list"></div>
+      </article>
+
+      <article>
+        <h2 class="tw">Chat</h2>
+        <div id="chat-log" class="chat-log" aria-live="polite"></div>
+        <form id="chat-form" class="row" style="margin-top:.5rem;">
+          <input id="chat-input" type="text" placeholder="Type a message…" aria-label="Chat message" />
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </article>
+    </div>
+
+    <p class="muted small" style="margin-top:1rem;">
+      Privacy note: this demo stores posts and messages only in your browser using localStorage (not uploaded anywhere).
+    </p>
+  </main>
+
+  <footer><p class="tw small">© 2025 Mushymi Dog Training</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

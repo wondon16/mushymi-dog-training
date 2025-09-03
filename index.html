@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mushymi Dog Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sparkle Background -->
+  <canvas id="sparkle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Music Controls -->
+  <div id="music-control" role="region" aria-label="Music controls">
+    <button id="toggle-music" aria-pressed="true">🔊 Music On</button>
+    <audio id="bg-music" loop autoplay>
+      <!-- 1) Local file you provide -->
+      <source src="audio/lofi.mp3" type="audio/mp3" />
+    </audio>
+  </div>
+
+  <header>
+    <h1 class="tw">Mushymi Dog Training 🐾</h1>
+    <p class="tag tw">Positive, modern training for real life.</p>
+
+    <button id="menu-btn" aria-expanded="false" aria-controls="menu">Menu ☰</button>
+    <nav id="menu" class="hidden" aria-label="Main">
+      <ul>
+        <li><a href="training.html">Training Videos</a></li>
+        <li><a href="howto.html">Step-by-Step Basics</a></li>
+        <li><a href="schedule.html">Schedule Session</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="profile.html">Dog Profile</a></li>
+        <li><a href="diet.html">Raw Food Diet Plans</a></li>
+        <li><a href="contact.html">Ask a Question</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 class="tw">Welcome to Mushymi</h2>
+      <p class="tw">
+        Your all-in-one hub for dog training that’s kind, effective, and easy to follow. Explore our free
+        training video library from trusted organizations, read step-by-step guides, schedule sessions,
+        connect with a supportive community, and learn about nutrition and safety.
+      </p>
+    </section>
+
+    <section class="grid-2">
+      <a class="card btn-card" href="training.html">
+        <h3 class="tw">Training Videos</h3>
+        <p>Curated, free, positive-reinforcement videos for core skills.</p>
+      </a>
+
+      <a class="card btn-card" href="howto.html">
+        <h3 class="tw">How-To Basics</h3>
+        <p>Simple, proven steps for sit, down, stay, recall, and loose-lead walking.</p>
+      </a>
+
+      <a class="card btn-card" href="schedule.html">
+        <h3 class="tw">Schedule a Session</h3>
+        <p>Send a booking request with your goals and preferred times.</p>
+      </a>
+
+      <a class="card btn-card" href="community.html">
+        <h3 class="tw">Community</h3>
+        <p>Post photos/videos, share wins, and chat (saved locally in your browser).</p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p class="tw small">© 2025 Mushymi Dog Training | Built with 🐾 and 💙</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

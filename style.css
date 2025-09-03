@@ -1,0 +1,93 @@
+/* Reset & Theme */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --sky:#7BAFD4; --navy:#13294B; --white:#fff; --ink:#0e1b32; --muted:#335; }
+html, body { height: 100%; }
+body { font-family: "Courier New", monospace; color: var(--navy); line-height: 1.6; }
+
+/* Sparkle background */
+#sparkle-canvas {
+  position: fixed; inset: 0; width: 100%; height: 100%;
+  z-index: -1; background: linear-gradient(135deg, var(--sky), var(--white));
+}
+
+/* Header / Nav */
+header { text-align: center; padding: 1rem 1rem .5rem; background: rgba(123,175,212,.9); border-bottom: 2px solid var(--navy); }
+h1 { color: var(--navy); font-size: 2.1rem; }
+.tag { margin-top: .25rem; }
+#menu-btn {
+  background: var(--navy); color: var(--white); border: 0; padding: .5rem 1rem; margin:.75rem 0 1rem;
+  border-radius: 10px; cursor: pointer;
+}
+nav ul { list-style: none; background: rgba(19,41,75,.95); padding: 1rem; border-radius: 12px; display: grid; gap: .5rem; }
+nav a { color: var(--white); text-decoration: none; }
+nav a[aria-current="page"] { text-decoration: underline; }
+.hidden { display: none; }
+
+/* Layout */
+main { margin: 1rem; display: grid; gap: 1rem; }
+.card {
+  background: rgba(255,255,255,.88);
+  border: 1px solid var(--sky);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: .75rem; align-items: end; }
+.btn-card { text-decoration: none; color: var(--navy); transition: transform .1s; }
+.btn-card:hover { transform: translateY(-2px); }
+
+.muted { color: #1b2c4f; opacity: .85; }
+.small { font-size: .92rem; }
+
+/* Videos */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1rem; }
+.lesson { background: #f4faff; border: 1px solid var(--sky); padding: .75rem; border-radius: 10px; }
+.iframe-wrap { position: relative; padding-top: 56.25%; border-radius: 10px; overflow: hidden; border: 1px solid var(--sky); background:#000; }
+.iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Forms / Buttons */
+.form label { display:block; font-weight: 600; margin-bottom:.35rem; }
+.form input, .form textarea {
+  width: 100%; padding: .6rem .7rem; border:1px solid var(--sky); border-radius: 8px; background: #fff;
+}
+.form textarea { min-height: 100px; resize: vertical; }
+.btn {
+  background: var(--navy); color: var(--white); border: 0; padding: .6rem 1rem; border-radius: 10px; cursor: pointer; text-decoration: none; display: inline-block;
+}
+.btn-inline { padding: .35rem .6rem; font-size: .9rem; }
+
+/* Community */
+.post-list { display: grid; gap: .75rem; margin-top: .75rem; }
+.post { background: #fff; border: 1px solid var(--sky); border-radius: 10px; padding: .6rem; }
+.post img, .post video { width: 100%; border-radius: 8px; }
+
+/* Chat */
+.chat-log { background: #fff; border: 1px solid var(--sky); border-radius: 10px; height: 260px; overflow: auto; padding: .5rem; display: grid; gap: .3rem; }
+.chat-msg { background: #eef6ff; padding: .4rem .6rem; border-radius: 8px; }
+
+/* Profile */
+.profile-card { margin-top: .75rem; display: grid; grid-template-columns: 110px 1fr; gap: .75rem; align-items: center; }
+.profile-card img { width: 110px; height: 110px; object-fit: cover; border-radius: 10px; border: 1px solid var(--sky); }
+
+/* Music Control */
+#music-control { position: fixed; top: 10px; left: 10px; z-index: 1000; }
+#toggle-music { background: var(--navy); color: var(--white); border: 0; padding: .4rem .8rem; border-radius: 10px; cursor: pointer; }
+
+/* Typewriter (on-view) */
+.tw { --tw-speed: 28ms; }
+.tw.typer-done { border-right: 0; }
+.tw::after {
+  content: " "; margin-left: 2px; border-right: 2px solid var(--navy); animation: blink .8s step-end infinite;
+}
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* Footer */
+footer { text-align: center; padding: 1rem; color: var(--white); background: var(--navy); margin-top: 1rem; border-top: 2px solid var(--sky); }
+
+/* References */
+.refs { padding-left: 1.1rem; display: grid; gap: .35rem; }
+.refs a { color: var(--ink); }
+
+/* Responsive tweaks */
+@media (min-width: 900px) { h1 { font-size: 2.4rem; } }

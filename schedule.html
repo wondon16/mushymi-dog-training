@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schedule Session | Mushymi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="sparkle-canvas"></canvas>
+  <div id="music-control"><button id="toggle-music">🔊 Music On</button>
+    <audio id="bg-music" loop autoplay><source src="audio/lofi.mp3" type="audio/mp3" /></audio>
+  </div>
+
+  <header>
+    <h1 class="tw">Schedule a Training Session</h1>
+    <button id="menu-btn">Menu ☰</button>
+    <nav id="menu" class="hidden">
+      <ul>
+        <li><a href="training.html">Training Videos</a></li>
+        <li><a href="howto.html">Step-by-Step Basics</a></li>
+        <li><a href="schedule.html" aria-current="page">Schedule Session</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="profile.html">Dog Profile</a></li>
+        <li><a href="diet.html">Raw Food Diet Plans</a></li>
+        <li><a href="contact.html">Ask a Question</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="card">
+    <form id="book-form" class="form">
+      <div class="row">
+        <label>Full Name <input id="bf-name" type="text" required /></label>
+        <label>Email <input id="bf-email" type="email" required /></label>
+      </div>
+      <div class="row">
+        <label>Date <input id="bf-date" type="date" required /></label>
+        <label>Time <input id="bf-time" type="time" required /></label>
+      </div>
+      <label>Goals
+        <textarea id="bf-goals" placeholder="e.g., leash pulling, recall, puppy basics"></textarea>
+      </label>
+      <button class="btn" type="submit">Request Booking</button>
+      <p class="muted small">Submitting opens your email app with details pre-filled.</p>
+    </form>
+
+    <!-- NOTE: replace the email in script.js (BOOKING_EMAIL) with your real address -->
+  </main>
+
+  <footer><p class="tw small">© 2025 Mushymi Dog Training</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
