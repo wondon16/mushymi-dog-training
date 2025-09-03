@@ -48,9 +48,7 @@ main { margin: 1rem; display: grid; gap: 1rem; }
 
 /* Forms / Buttons */
 .form label { display:block; font-weight: 600; margin-bottom:.35rem; }
-.form input, .form textarea {
-  width: 100%; padding: .6rem .7rem; border:1px solid var(--sky); border-radius: 8px; background: #fff;
-}
+.form input, .form textarea { width: 100%; padding: .6rem .7rem; border:1px solid var(--sky); border-radius: 8px; background: #fff; }
 .form textarea { min-height: 100px; resize: vertical; }
 .btn {
   background: var(--navy); color: var(--white); border: 0; padding: .6rem 1rem; border-radius: 10px; cursor: pointer; text-decoration: none; display: inline-block;
@@ -82,12 +80,34 @@ main { margin: 1rem; display: grid; gap: 1rem; }
 }
 @keyframes blink { 50% { border-color: transparent; } }
 
+/* Floating CTA (Welcome) */
+.cta-floating {
+  position: fixed; right: 16px; bottom: 16px;
+  background: var(--navy); color: var(--white);
+  padding: .8rem 1.1rem; border-radius: 999px; text-decoration: none; box-shadow: 0 8px 22px rgba(0,0,0,.18);
+  font-weight: 700;
+  animation: pulse 1.6s ease-in-out infinite;
+  z-index: 1001;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+/* Hero (Home) */
+.hero { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.hero-media img {
+  width: 100%; max-height: 350px; object-fit: cover; border-radius: 14px; border: 1px solid var(--sky);
+}
+.hero-copy { display: grid; gap: .6rem; }
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1fr 1.2fr; align-items: center; }
+  h1 { font-size: 2.4rem; }
+}
+
 /* Footer */
 footer { text-align: center; padding: 1rem; color: var(--white); background: var(--navy); margin-top: 1rem; border-top: 2px solid var(--sky); }
 
 /* References */
 .refs { padding-left: 1.1rem; display: grid; gap: .35rem; }
 .refs a { color: var(--ink); }
-
-/* Responsive tweaks */
-@media (min-width: 900px) { h1 { font-size: 2.4rem; } }

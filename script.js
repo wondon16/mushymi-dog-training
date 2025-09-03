@@ -60,7 +60,24 @@ const io = new IntersectionObserver(entries => {
     io.unobserve(el);
   });
 }, { threshold: 0.2 });
+
 document.querySelectorAll(".tw").forEach(el => io.observe(el));
+
+/* ===== Reveal CTA after welcome intro typed ===== */
+(function revealCTAWhenTyped(){
+  const intro = document.getElementById("welcome-intro");
+  const cta = document.getElementById("cta-floating");
+  if (!intro || !cta) return;
+
+  // Wait until all .tw inside intro have class "typer-done"
+  const twEls = Array.from(intro.querySelectorAll(".tw"));
+  function checkDone() {
+    const allDone = twEls.every(el => el.classList.contains("typer-done"));
+    if (allDone) cta.classList.remove("hidden");
+    else requestAnimationFrame(checkDone);
+  }
+  requestAnimationFrame(checkDone);
+})();
 
 /* ===== Music Toggle ===== */
 const bg = document.getElementById("bg-music");
@@ -192,3 +209,4 @@ if (profileForm) {
   });
   renderProfile();
 }
+

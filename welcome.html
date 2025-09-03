@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome | Mushymi Dog Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sparkle Background -->
+  <canvas id="sparkle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Music Controls -->
+  <div id="music-control" role="region" aria-label="Music controls">
+    <button id="toggle-music" aria-pressed="true">🔊 Music On</button>
+    <audio id="bg-music" loop autoplay>
+      <source src="audio/lofi.mp3" type="audio/mp3" />
+    </audio>
+  </div>
+
+  <!-- Minimal header (menu still available if wanted) -->
+  <header>
+    <h1 class="tw">Welcome to Mushymi Dog Training 🐾</h1>
+    <p class="tag tw">Your friendly, positive path to real-life results.</p>
+
+    <button id="menu-btn" aria-expanded="false" aria-controls="menu">Menu ☰</button>
+    <nav id="menu" class="hidden" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="training.html">Training Videos</a></li>
+        <li><a href="howto.html">Step-by-Step Basics</a></li>
+        <li><a href="schedule.html">Schedule Session</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="profile.html">Dog Profile</a></li>
+        <li><a href="diet.html">Raw Food Diet Plans</a></li>
+        <li><a href="contact.html">Ask a Question</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="card" id="welcome-intro">
+    <h2 class="tw">How to use this website</h2>
+
+    <p class="tw">
+      1) Start with <strong>Training Videos</strong> for quick wins: Sit, Stay, Recall, Loose-Lead,
+      and “Leave It.” These are curated from trusted organizations using positive reinforcement.
+    </p>
+
+    <p class="tw">
+      2) Open <strong>Step-by-Step Basics</strong> for simple progressions: short sessions, instant rewards,
+      and clear goals. We build reliability by increasing duration, distance, and distraction — one step at a time.
+    </p>
+
+    <p class="tw">
+      3) Tap <strong>Schedule Session</strong> to send a pre-filled email request with your availability and training goals.
+      I’ll reply to confirm the best time.
+    </p>
+
+    <p class="tw">
+      4) Share milestones in the <strong>Community</strong>: post photos/videos and chat with other dog lovers
+      (saved only in your browser for privacy in this demo).
+    </p>
+
+    <p class="tw">
+      5) Build your <strong>Dog Profile</strong> — name, breed, age, and a cute photo — to keep your pup front and center.
+    </p>
+
+    <p class="tw">
+      6) Review <strong>Raw Food Diet Plans</strong> for safety guidance and vet-approved hygiene tips. Always consult your veterinarian
+      before changing diets.
+    </p>
+
+    <p class="tw">
+      7) Have questions? Use <strong>Ask a Question</strong> to email me directly. The <strong>References</strong> page lists
+      all trusted sources for deeper reading.
+    </p>
+
+    <!-- Floating CTA (hidden until the typing finishes on this page) -->
+    <a id="cta-floating" class="cta-floating hidden" href="index.html" aria-label="Join the Mushymi Dog Team">
+      Click here to join the Mushymi Dog Team!
+    </a>
+  </main>
+
+  <footer>
+    <p class="tw small">© 2025 Mushymi Dog Training | Built with 🐾 and 💙</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

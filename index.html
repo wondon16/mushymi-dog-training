@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mushymi Dog Training</title>
+  <title>Home | Mushymi Dog Training</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Sparkle Background -->
   <canvas id="sparkle-canvas" aria-hidden="true"></canvas>
 
-  <!-- Music Controls -->
   <div id="music-control" role="region" aria-label="Music controls">
     <button id="toggle-music" aria-pressed="true">🔊 Music On</button>
     <audio id="bg-music" loop autoplay>
-      <!-- 1) Local file you provide -->
       <source src="audio/lofi.mp3" type="audio/mp3" />
     </audio>
   </div>
@@ -39,15 +36,26 @@
   </header>
 
   <main>
-    <section class="card">
-      <h2 class="tw">Welcome to Mushymi</h2>
-      <p class="tw">
-        Your all-in-one hub for dog training that’s kind, effective, and easy to follow. Explore our free
-        training video library from trusted organizations, read step-by-step guides, schedule sessions,
-        connect with a supportive community, and learn about nutrition and safety.
-      </p>
+    <!-- Hero: Who Mushymi is -->
+    <section class="card hero">
+      <div class="hero-media">
+        <img src="images/mushymi.jpg" alt="Mushymi the dog" onerror="this.src='images/dog1.jpg'"/>
+      </div>
+      <div class="hero-copy">
+        <h2 class="tw">Who is Mushymi?</h2>
+        <p class="tw">
+          Mushymi is the joyful spirit behind our training philosophy — a reminder that learning should be kind,
+          confidence-building, and fun. We believe in positive reinforcement, clear communication, and real-life
+          manners you can use anywhere: at home, on walks, and around friends.
+        </p>
+        <p class="tw">
+          Explore our trusted videos, step-by-step guides, and community tips. When you’re ready for personal help,
+          book a session and we’ll tailor a plan to your dog’s age, breed, and personality.
+        </p>
+      </div>
     </section>
 
+    <!-- Quick Feature Cards -->
     <section class="grid-2">
       <a class="card btn-card" href="training.html">
         <h3 class="tw">Training Videos</h3>
@@ -56,17 +64,17 @@
 
       <a class="card btn-card" href="howto.html">
         <h3 class="tw">How-To Basics</h3>
-        <p>Simple, proven steps for sit, down, stay, recall, and loose-lead walking.</p>
+        <p>Simple progressions for sit, down, stay, recall, and loose-lead walking.</p>
       </a>
 
       <a class="card btn-card" href="schedule.html">
         <h3 class="tw">Schedule a Session</h3>
-        <p>Send a booking request with your goals and preferred times.</p>
+        <p>Send a booking request with your availability and goals.</p>
       </a>
 
       <a class="card btn-card" href="community.html">
         <h3 class="tw">Community</h3>
-        <p>Post photos/videos, share wins, and chat (saved locally in your browser).</p>
+        <p>Post photos/videos and chat with fellow dog lovers (stored locally).</p>
       </a>
     </section>
   </main>
